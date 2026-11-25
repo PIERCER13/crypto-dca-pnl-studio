@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="piercer" />
+  <title>Piercer Crypto Studio — Cotações, DCA, P&L & Imposto</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Piercer Crypto Studio — Preço ao Vivo, DCA &amp; P&amp;L</h1>
+      <p class="subtitle">Cotações ao vivo (CoinGecko), conversor Crypto/USD/BRL, calculadora de preço médio (DCA), P&amp;L e DARF 35k</p>
+    </div>
+    <button type="button" class="btn btn-primary" id="btnFetchPrices">Atualizar Cotações</button>
+  </header>
+
+  <main class="container">
+    <section id="tickerBar" class="ticker-bar"></section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Conversor &amp; Calculadora de P&amp;L (Trade)</h2>
+        <div class="row-2">
+          <div class="field"><label>Moeda</label><select id="coinSelect"><option value="bitcoin">Bitcoin (BTC)</option><option value="ethereum">Ethereum (ETH)</option><option value="solana">Solana (SOL)</option><option value="binancecoin">BNB</option><option value="ripple">XRP</option></select></div>
+          <div class="field"><label>Quantidade</label><input type="number" id="convQty" value="0.05" step="0.0001" min="0" /></div>
+        </div>
+        <div id="convOut" class="status-box">USD: $0.00 • BRL: R$ 0,00</div>
+
+        <hr class="sep" />
+        <div class="row-2">
+          <div class="field"><label>Preço Entrada (USD)</label><input type="number" id="entryPrice" value="62000" step="10" /></div>
+          <div class="field"><label>Preço Saída / Alvo (USD)</label><input type="number" id="exitPrice" value="74000" step="10" /></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label>Capital Investido (USD)</label><input type="number" id="capitalUsd" value="1000" step="10" /></div>
+          <div class="field"><label>Taxa Exchange (% ida+volta)</label><input type="number" id="feePct" value="0.2" step="0.05" /></div>
+        </div>
+        <div id="pnlOut" class="status-box">Lucro Líquido: $0.00</div>
+      </article>
+
+      <article class="card">
+        <h2>Calculadora DCA (Preço Médio) &amp; Imposto BR</h2>
+        <form id="dcaForm" class="dca-form">
+          <input type="number" id="dcaQty" placeholder="Qtd (ex: 0.01)" step="0.00001" min="0.00001" required />
+          <input type="number" id="dcaPrice" placeholder="Preço Pago (USD)" step="0.01" min="0.01" required />
+          <button type="submit" class="btn btn-primary">+ Compra</button>
+        </form>
+        <div id="dcaSummary" class="status-box" style="margin-bottom:10px;">Preço Médio: $0.00</div>
+        <div id="dcaList" class="dca-list"></div>
+
+        <hr class="sep" />
+        <div class="field"><label>Total de Vendas no Mês (BRL) — Regra Isenção R$ 35.000</label><input type="number" id="vendasMesBrl" value="22000" min="0" step="500" /></div>
+        <div class="field"><label>Lucro Obtido nas Vendas (BRL)</label><input type="number" id="lucroMesBrl" value="4500" min="0" step="100" /></div>
+        <div id="taxOut" class="status-box">Isento de IR (vendas ≤ R$ 35.000 no mês)</div>
+      </article>
+    </section>
+  </main>
+  <script src="../piercer_i18n.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
