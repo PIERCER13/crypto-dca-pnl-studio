@@ -18,6 +18,8 @@ Cotações ao vivo (CoinGecko), conversor Crypto/USD/BRL, calculadora de preço 
 
 ## Project Files
 
+- `.git`
+- `.gitattributes`
 - `app.js`
 - `index.html`
 - `README.md`
