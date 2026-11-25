@@ -1,13 +1,13 @@
 > **[Versão em Português](./README.md)**
 
-# Piercer Crypto Studio — Cotações, DCA, P&L & Imposto
+# Piercer Crypto Studio — quotes, DCA, P&L & tax
 
-Cotações ao vivo (CoinGecko), conversor Crypto/USD/BRL, calculadora de preço médio (DCA), P&L e DARF 35k
+quotes live (CoinGecko), convert Crypto/USD/BRL, calculator of average price (DCA), P&L and DARF 35k
 
 ## Features
 
-- **Main Sections**: Conversor & Calculadora de P&L (Trade), Calculadora DCA (Preço Médio) & Imposto BR
-- **Available Actions**: Atualizar Cotações, + Compra
+- **Main Sections**: convert & calculator of P&L (Trade), calculator DCA (average price) & tax BR
+- **Available Actions**: refresh quotes, + Compra
 - **Auto-Save**: automatically persists changes in the browser (`localStorage`).
 - **Multi-Language**: built-in language switcher (`PT / EN / ES`).
 
@@ -22,6 +22,7 @@ Cotações ao vivo (CoinGecko), conversor Crypto/USD/BRL, calculadora de preço 
 - `.gitattributes`
 - `app.js`
 - `index.html`
+- `piercer_i18n.js`
 - `README.md`
 - `start.bat`
 - `styles.css`
